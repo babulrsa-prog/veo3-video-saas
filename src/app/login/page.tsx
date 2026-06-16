@@ -30,8 +30,19 @@ export default function Home() {
   }
 
   if (status === "unauthenticated") {
-    router.push("/login");
-    return null;
+    return (
+      <main className="min-h-screen bg-black text-white flex items-center justify-center">
+        <div className="text-center">
+          <p className="text-zinc-400 mb-4">Please login to continue</p>
+          
+            href="/login"
+            className="px-6 py-3 bg-violet-600 hover:bg-violet-500 text-white font-semibold rounded-xl"
+          >
+            Go to Login
+          </a>
+        </div>
+      </main>
+    );
   }
 
   const handleGenerate = async () => {
